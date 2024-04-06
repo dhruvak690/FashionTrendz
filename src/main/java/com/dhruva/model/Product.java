@@ -1,7 +1,9 @@
 package com.dhruva.model;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDate;
@@ -12,6 +14,8 @@ import java.util.Set;
 
 @Getter
 @Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 public class Product {
 
@@ -32,7 +36,7 @@ public class Product {
     private int discountedPrice;
 
     @Column(name="quantity")
-    private int Quantity;
+    private int quantity;
 
     @Column(name="brand")
     private String brand;
@@ -62,27 +66,6 @@ public class Product {
     private Category category;
 
     private LocalDate createdAt;
-
-    public Product() {
-    }
-
-    public Product(Long id, String title, String description, int price, int discountedPrice, int quantity, String brand, String color, Set<Size> sizes, String imageUrl, List<Rating> ratings, List<Review> reviews, int numRatings, Category category, LocalDate createdAt) {
-        this.id = id;
-        this.title = title;
-        Description = description;
-        this.price = price;
-        this.discountedPrice = discountedPrice;
-        Quantity = quantity;
-        this.brand = brand;
-        this.color = color;
-        this.sizes = sizes;
-        this.imageUrl = imageUrl;
-        this.ratings = ratings;
-        this.reviews = reviews;
-        this.numRatings = numRatings;
-        this.category = category;
-        this.createdAt = createdAt;
-    }
 
 
 }

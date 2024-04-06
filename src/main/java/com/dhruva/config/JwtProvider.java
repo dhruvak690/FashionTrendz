@@ -8,12 +8,12 @@ import org.springframework.security.core.Authentication;
 import javax.crypto.SecretKey;
 import java.util.Date;
 
-public class jwtProvider {
+public class JwtProvider {
 
     SecretKey key = Keys.hmacShaKeyFor(jwtConstant.SECRET_KEY.getBytes());
     public String generateToken(Authentication auths){
         String jwt = Jwts.builder().setIssuedAt(new Date())
-                .setExpiration(new Date(new Date().getTime()+846000000))
+                .setExpiration(new Date(new Date().getTime()+864000000))
                 .claim("email",auths.getName()).signWith(key).compact();
 
         return jwt;

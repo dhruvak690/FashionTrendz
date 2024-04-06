@@ -2,14 +2,19 @@ package com.dhruva.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
 
 @Getter
 @Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
+@Table(name = "review")
 public class Review {
 
     @Id
@@ -28,17 +33,6 @@ public class Review {
     private User user;
 
     private LocalDateTime createdAt;
-
-    public Review() {
-    }
-
-    public Review(Long id, String review, Product product, User user, LocalDateTime createdAt) {
-        this.id = id;
-        this.review = review;
-        this.product = product;
-        this.user = user;
-        this.createdAt = createdAt;
-    }
 
 
 }

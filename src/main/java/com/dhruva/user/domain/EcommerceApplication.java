@@ -1,4 +1,4 @@
-package com.dhruva.ecommerce;
+package com.dhruva.user.domain;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

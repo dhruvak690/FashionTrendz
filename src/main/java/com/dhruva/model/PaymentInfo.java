@@ -6,7 +6,7 @@ import java.time.LocalDate;
 
 public class PaymentInfo {
 
-    @Column(name = "card_holder_name")
+    @Column(name = "cardholder_name")
     private String cardHolderName;
 
     @Column(name="card_number")
